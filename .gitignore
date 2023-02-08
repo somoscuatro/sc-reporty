@@ -1,2 +1,9 @@
 # Dependencies
 node_modules
+
+# Dist folders
+backend/dist
+
+# Environment files
+backend/.env*
+!backend/.env.example
