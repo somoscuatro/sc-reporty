@@ -1,0 +1,10 @@
+// WARN: This query is extremely slow (~10/15 seconds). Once we define the
+// frontend behaviour we should consider to retrieve data in chunks using
+// cursors.
+
+POST http://localhost:8000/api/v0.1.0/notion/database
+content-type: application/json
+
+{
+  "database_id": "4b37906fb1cd4019b79ba6d84ba15a03"
+}
