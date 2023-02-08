@@ -1,0 +1,21 @@
+{
+  "name": "sc-reporty",
+  "version": "0.1.0",
+  "description": "An admin dashboard to keep track of somoscuatro internal data such as invoices, time tracking and bank movements.",
+  "author": {
+    "name": "somoscuatro",
+    "email": "tech@somoscuatro.es"
+  },
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:somoscuatro/sc-reporty"
+  },
+  "bugs": {
+    "email": "bugs@somoscuatro.es",
+    "url": "https://github.com/somoscuatro/sc-reporty/issues"
+  },
+  "scripts": {
+
+  }
+}
