@@ -1,0 +1,6 @@
+POST http://localhost:8000/api/v0.1.0/harvest/time-entries
+content-type: application/json
+
+{
+  "start_date": "2023-01-01"
+}
