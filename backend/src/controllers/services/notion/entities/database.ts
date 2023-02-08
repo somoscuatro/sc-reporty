@@ -36,6 +36,6 @@ module.exports.query = async ({
 
   return {
     status: 200,
-    results: results,
+    results,
   };
 };
