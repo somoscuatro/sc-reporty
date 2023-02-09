@@ -20,8 +20,6 @@ module.exports.query = async ({
     start_cursor: undefined,
   };
 
-  console.log(database_id);
-
   while (has_more) {
     try {
       const response = await notion.databases.query(args);
