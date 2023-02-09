@@ -1,5 +1,19 @@
+# @name login
+POST https://dev-xbqfsdq56hw0iqb5.us.auth0.com/oauth/token
+Content-Type: application/json
+
+{
+  "grant_type": "client_credentials",
+  "client_id": "{{$dotenv AUTH0_CLIENT_ID}}",
+  "client_secret": "{{$dotenv AUTH0_CLIENT_SECRET}}",
+  "audience": "{{$dotenv AUTH0_AUDIENCE}}"
+}
+
+###
+
 POST http://localhost:8000/api/v0.1.0/harvest/time-entries
-content-type: application/json
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.access_token}}
 
 {
   "start_date": "2023-01-01"

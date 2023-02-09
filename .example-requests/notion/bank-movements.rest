@@ -1,9 +1,23 @@
+# @name login
+POST https://dev-xbqfsdq56hw0iqb5.us.auth0.com/oauth/token
+Content-Type: application/json
+
+{
+  "grant_type": "client_credentials",
+  "client_id": "{{$dotenv AUTH0_CLIENT_ID}}",
+  "client_secret": "{{$dotenv AUTH0_CLIENT_SECRET}}",
+  "audience": "{{$dotenv AUTH0_AUDIENCE}}"
+}
+
+###
+
 // WARN: This query is extremely slow (~10/15 seconds). Once we define the
 // frontend behaviour we should consider to retrieve data in chunks using
 // cursors.
 
 POST http://localhost:8000/api/v0.1.0/notion/database
-content-type: application/json
+Content-Type: application/json
+Authorization: Bearer {{login.response.body.access_token}}
 
 {
   "database_id": "4b37906fb1cd4019b79ba6d84ba15a03"
