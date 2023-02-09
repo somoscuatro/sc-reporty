@@ -1,11 +1,8 @@
 // External dependencies.
 import { expressjwt, GetVerificationKey } from "express-jwt";
-import * as dotenv from "dotenv";
 import jwksRsa from "jwks-rsa";
 
-dotenv.config();
-
-export const authz = expressjwt({
+module.exports.jwt = expressjwt({
   secret: jwksRsa.expressJwtSecret({
     cache: true,
     rateLimit: true,
